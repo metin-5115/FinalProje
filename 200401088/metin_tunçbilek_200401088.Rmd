@@ -86,3 +86,10 @@ print(grafik)
 test_output<-capture.output(test_file("Q6_tests_metin_tunçbilek_200401088.R"))
 ```
 
+Voltalite artışı fiyatları yukarılara taşımaktadır. Düşük fiyatlarda Volume gerekmeden fiyatlar hızlı artış göstermektedir fakat yüksek fiyat dilimlerinde hacim artışı fiyat artışı sağlamakta olsada anlık yükselişler göstermemektedir.
+
+# Q7 : Sonuç değerlendirme, tavsiyeler
+
+Sonuçlar istenilen bilgiyi elde edememiştir. Seçilen veri seti model eğitilmediği sürece veri grafikleri ve çıktılarına bakarak anlamlı bir sonuç vermemektedir. Bitcoin fiyat verileri tekrarlanmayan bir veri olduğu için sınıflandırma yapılamamıştır. LSTM modeli ile geçmişten günümüze Open sutunu Volume , High ,Low sutunlarının eğitilip tahmin ile çıktı alınması planlanmıştır, fakat r dilinde LSTM modeli eğitilememiştir Veri ön işleme adımı yapıldı histogram grafiği çizdirildi ama müşteriye fayda sağlayacak bir bilgi elde edilememektedir.
+
+Eğer LSTM veya diğer derin öğrenme modelleri ile Dataset eğitilebilirse RNN, CNN gibi model türleri anlamlı bir bilgiyi müşteriye sunabilir.
