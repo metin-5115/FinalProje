@@ -71,3 +71,18 @@ test_output<-capture.output(test_file("Q4_tests_metin_tunçbilek_200401088.R"))
 ##veri setini günümüzden geçmişe giderek ilerlemektedir bu yüzden ters çevirilmiştir
 
 ##işimize yarayacak verileri şeçtik
+
+
+# Q6 : Veri analizi
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(ggplot2)
+
+grafik <- ggplot(data = myDf, aes(x = Volume, y = Open)) +
+  geom_point() +
+  labs(title = "Örnek Grafik", x = "X Ekseni", y = "Y Ekseni")
+print(grafik)
+
+test_output<-capture.output(test_file("Q6_tests_metin_tunçbilek_200401088.R"))
+```
+
