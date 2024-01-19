@@ -1,0 +1,11 @@
+---
+title: "Proje Rapo : Metin Tunçbilek 200401088"
+output: html_notebook
+---
+
+# Q1 : Problem tanımı
+
+Şirketimiz \*\* Capital İnvest\*\*. Problemimiz *Şirketimizin artan müşteri sayısından dolayı ve financal analizlerin müşteriye iletiminde oluşan zaman maaliyeti verimliliği azaltmaktadır. Yeni sistem'de Bitcoin geçmiş verilerini R programlama dilinde modeller ile eğitilip tahmin yapması ve arayüz ile müşterilerin kullanımına sunulması hedeflenmektedir. Bu sayede makine öğrenmesi methodlarını kullanarak daha fazla müşteriye hizmet vermek hedeflenmektedir.*  
+
+
+
