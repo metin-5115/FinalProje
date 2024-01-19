@@ -1,0 +1,73 @@
+---
+title: "Proje Rapo : Metin Tunçbilek 200401088"
+output: html_notebook
+---
+
+# Q1 : Problem tanımı
+
+Şirketimiz \*\* Capital İnvest\*\*. Problemimiz *Şirketimizin artan müşteri sayısından dolayı ve financal analizlerin müşteriye iletiminde oluşan zaman maaliyeti verimliliği azaltmaktadır. Yeni sistem'de Bitcoin geçmiş verilerini R programlama dilinde modeller ile eğitilip tahmin yapması ve arayüz ile müşterilerin kullanımına sunulması hedeflenmektedir. Bu sayede makine öğrenmesi methodlarını kullanarak daha fazla müşteriye hizmet vermek hedeflenmektedir.*  
+
+
+
+# Q2 : Proje Amacı
+
+[Bitcoin Historical Data](https://www.kaggle.com/datasets/armanzhalgasbayev/bitcoin-historical-data-2021-2023) adli Kaggle veri setini kullanarak iş problemini *Şirketimizin artan müşteri sayısından dolayı ve financal analizlerin müşteriye iletiminde oluşan zaman maaliyeti verimliliği azaltmaktadır.* ve **LSTM gibi derin öğrenme algoritmaları ile model eğitmeli ve tahmin yaptırmalıyız** yöntemler kullanarak çözmeyi amaçlıyoruz. Bu sayede problemi azaltmayı / yok etmeyi ya da kar arttırımına katkıda bulunmayı planlıyoruz.
+
+
+# Q3 : Veri seti keşifsel analizi
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(readr)
+library(ggplot2)
+library(tibble)
+library(dplyr)
+```
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+myDf<-read_csv("deneme_df.csv")
+
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+head(myDf,10)
+
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+class(myDf)
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+class(myDf$Open)
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+hist(myDf$Open,breaks = 20)
+
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+
+print(head(myDf$Open))
+
+library(testthat)
+test_output<-capture.output(test_file("Q3_tests_metin_tunçbilek_200401088.R"))
+
+```
+
+
+# Q4 : Veri seti ön işlemesi
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+reversedMatrix <- apply(myDf, 2, rev)
+reversedMatrix
+head(reversedMatrix,10)
+secilen_veri <- reversedMatrix[, c("Open", "Volume","Close","Low")]
+head(secilen_veri,10)
+library(testthat)
+test_output<-capture.output(test_file("Q4_tests_metin_tunçbilek_200401088.R"))
+```
+
+
+##veri setini günümüzden geçmişe giderek ilerlemektedir bu yüzden ters çevirilmiştir
+
+##işimize yarayacak verileri şeçtik
