@@ -1,6 +1,8 @@
 ---
-title: "Proje Rapo : Metin Tunçbilek 200401088"
-output: html_notebook
+title: 'Proje Rapo : Metin Tunçbilek 200401088'
+output:
+  html_document:
+    df_print: paged
 ---
 
 # Q1 : Problem tanımı
@@ -11,3 +13,32 @@ output: html_notebook
 # Q2 : Proje Amacı
 
 [Bitcoin Historical Data](https://www.kaggle.com/datasets/armanzhalgasbayev/bitcoin-historical-data-2021-2023) adli Kaggle veri setini kullanarak iş problemini *Şirketimizin artan müşteri sayısından dolayı ve financal analizlerin müşteriye iletiminde oluşan zaman maaliyeti verimliliği azaltmaktadır.* ve **LSTM gibi derin öğrenme algoritmaları ile model eğitmeli ve tahmin yaptırmalıyız** yöntemler kullanarak çözmeyi amaçlıyoruz. Bu sayede problemi azaltmayı / yok etmeyi ya da kar arttırımına katkıda bulunmayı planlıyoruz.
+
+
+
+# Q3 : Veri seti keşifsel analizi
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(readr)
+library(ggplot2)
+library(tibble)
+library(dplyr)
+
+
+myDf<-read_csv("bitcoinHistorical.csv")
+
+head(myDf,10)
+
+class(myDf)
+
+class(myDf$Open)
+
+hist(myDf$Open,breaks = 20)
+
+print(head(myDf$Open))
+
+library(testthat)
+test_output<-capture.output(test_file("Q3_tests_metin_tunçbilek_200401088.R"))
+
+
+
+```
